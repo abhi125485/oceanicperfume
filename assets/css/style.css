@@ -1,0 +1,59 @@
+:root{
+  --bg:#061018;
+  --card:#07121a;
+  --muted:#aab8c2;
+  --gold:#c9a65a;
+  --accent:#9ec8d6;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#061018 0%, #021018 100%);color:#eaf6fb}
+a{color:inherit}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4vw;position:sticky;top:0;background:transparent;z-index:50}
+.brand{font-family:'Playfair Display',serif;font-size:22px;color:var(--gold);letter-spacing:1px}
+.nav-links{display:flex;gap:14px;align-items:center}
+.nav-links a{padding:8px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600}
+.nav-links a.active, .nav-links a:hover{color:var(--gold)}
+.cart-btn{background:var(--gold);border:none;padding:8px 12px;border-radius:10px;font-weight:700;cursor:pointer}
+.hero{display:grid;grid-template-columns:1fr 480px;gap:30px;align-items:center;padding:60px 4vw}
+.hero-left h1{font-size:44px;line-height:1.02;margin:0;color:#fff;font-family:'Playfair Display',serif}
+.lead{color:var(--muted);max-width:720px}
+.btn{padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);cursor:pointer;text-decoration:none;display:inline-block}
+.btn.primary{background:var(--gold);color:#07121a;font-weight:800}
+.btn.outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.2));padding:18px;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.6)}
+.hero-card img{width:100%;height:360px;object-fit:cover;border-radius:10px}
+.section{padding:48px 4vw}
+h2{color:var(--gold);margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--card);padding:12px;border-radius:12px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,0.6)}
+.card img{width:100%;height:200px;object-fit:cover;border-radius:8px}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.meta h4{margin:0;font-size:16px}
+.price{color:var(--gold);font-weight:800}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:120}
+.modal-card{width:min(920px,96%);background:#07121a;padding:18px;border-radius:12px;display:flex;gap:18px}
+.modal img{width:420px;height:420px;object-fit:cover;border-radius:10px}
+.modal-right{flex:1}
+.desc{color:var(--muted);margin-top:10px}
+.qty-row{margin-top:12px;display:flex;align-items:center;gap:8px}
+.qty-row input{width:80px;padding:8px;border-radius:8px;border:none;background:#07121a;color:#eaf6fb}
+.modal-actions{margin-top:14px;display:flex;gap:10px}
+.cart-panel{position:fixed;right:24px;bottom:24px;width:360px;background:#07121a;padding:12px;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.6);z-index:200}
+.cart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.cart-items{max-height:350px;overflow:auto}
+.cart-item{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+.small{padding:8px 10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);cursor:pointer}
+.cart-foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.hidden{display:none}
+.footer{padding:26px 4vw;color:var(--muted);text-align:center}
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+.contact-form input, .contact-form textarea{width:100%;padding:10px;border-radius:8px;border:none;background:#06131a;color:#eaf6fb;margin-bottom:10px}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:18px;padding:36px 4vw}
+  .modal-card{flex-direction:column}
+  .contact-grid{grid-template-columns:1fr}
+}
